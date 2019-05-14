@@ -2,7 +2,7 @@
 //
 // Jenkinsfile defining a mini pipeline to build and stage a Docker image
 // containing the following:
-//    RabbitMQ
+//    MongoDB
 //    Puppet Agent
 //    Nagios NRPE server
 //
@@ -20,9 +20,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 node("master"){
 
-  def String giturl = "git@github.com:ten-peb/docker-ubuntu-rabbitmq.git"
-  def String clone2 = 'docker-rabbitmq'
-  def String image_base_tag = "ubuntu-rabbitmq" 
+  def String giturl = "git@github.com:ten-peb/docker-ubuntu-mongodb.git"
+  def String clone2 = 'docker-mongodb''
+  def String image_base_tag = "ubuntu-mongodb" 
   def String image_version_tag = "0.5.0"
 
   // Grab the latest version from GitHub to "clone2" subdirectory to work on
@@ -43,7 +43,7 @@ node("master"){
     def String[] message = [
     "Greetings,",
     "This is to inform you that the Docker image ${image_base_tag} version ${image_version_tag}",
-    "This image contains RabbitMQ and",
+    "This image contains MongoDB  and",
     "the Puppet agent and Nagios NRPE server",
     "This was successfully built and pushed to the registry.",
     " ",
