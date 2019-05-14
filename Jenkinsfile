@@ -21,7 +21,7 @@
 node("master"){
 
   def String giturl = "git@github.com:ten-peb/docker-ubuntu-mongodb.git"
-  def String clone2 = 'docker-mongodb''
+  def String clone2 = 'docker-mongodb'
   def String image_base_tag = "ubuntu-mongodb" 
   def String image_version_tag = "0.5.0"
 
